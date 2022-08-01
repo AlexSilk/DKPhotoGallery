@@ -23,8 +23,16 @@ class DKPhotoImagePreviewVC: DKPhotoBaseImagePreviewVC {
     
     private let downloadOriginalImageButton = UIButton(type: .custom)
     
+    private let photoCommentLabel = UILabel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.photoCommentLabel.numberOfLines = 0;
+        self.photoCommentLabel.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
+        self.photoCommentLabel.textColor = UIColor.white
+        self.photoCommentLabel.frame = CGRect(x: 10, y: self.view.bounds.height, width: self.view.bounds.width - 20, height: 16)
+        self.view.addSubview(self.photoCommentLabel)
         
         self.downloadOriginalImageButton.titleLabel?.font = UIFont.systemFont(ofSize: 12)
         self.downloadOriginalImageButton.layer.borderWidth = 1
@@ -34,6 +42,19 @@ class DKPhotoImagePreviewVC: DKPhotoBaseImagePreviewVC {
         self.downloadOriginalImageButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
         self.downloadOriginalImageButton.addTarget(self, action: #selector(downloadOriginalImage), for: .touchUpInside)
         self.view.addSubview(self.downloadOriginalImageButton)
+    }
+    
+    private func setupLabel() {
+        if let extraInfo = self.item.extraInfo, let comment = extraInfo[DKPhotoGalleryItemExtraInfoKeyComment] as? String {
+            if comment != "" {
+                self.photoCommentLabel.text = comment
+                self.photoCommentLabel.sizeToFit()
+                self.photoCommentLabel.frame = CGRect(x: 10,y: self.view.bounds.height - self.photoCommentLabel.frame.height - 50, width: self.view.bounds.width - 20,height: self.photoCommentLabel.frame.height)
+                
+            } else {
+                self.photoCommentLabel.text = ""
+            }
+        }
     }
     
     @objc private func downloadOriginalImage() {
@@ -196,6 +217,8 @@ class DKPhotoImagePreviewVC: DKPhotoBaseImagePreviewVC {
     
     override func photoPreviewWillAppear() {
         super.photoPreviewWillAppear()
+        
+        setupLabel()
         
         if let image = self.item.image {
             self.image = image

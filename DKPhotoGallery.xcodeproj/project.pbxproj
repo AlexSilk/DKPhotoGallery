@@ -47,6 +47,7 @@
 		9CF878DB215B2F7C003F2667 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF878DA215B2F7C003F2667 /* AVKit.framework */; };
 		9CF878DD215B2F85003F2667 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF878DC215B2F85003F2667 /* WebKit.framework */; };
 		9CF878DF215B2F91003F2667 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF878DE215B2F91003F2667 /* MobileCoreServices.framework */; };
+		F88CF3E72897DF5000910E28 /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F88CF3E62897DF5000910E28 /* ru.lproj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		9CF878DA215B2F7C003F2667 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		9CF878DC215B2F85003F2667 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		9CF878DE215B2F91003F2667 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F88CF3E62897DF5000910E28 /* ru.lproj */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru.lproj; path = DKPhotoGallery/Resource/Resources/ru.lproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		9C565E27216B42AE00A16B22 /* DKPhotoGalleryBundle */ = {
 			isa = PBXGroup;
 			children = (
+				F88CF3E62897DF5000910E28 /* ru.lproj */,
 				9C565E2E216B43DA00A16B22 /* Base.lproj */,
 				9C565E31216B43DA00A16B22 /* en.lproj */,
 				9C565E2F216B43DA00A16B22 /* Images.xcassets */,
@@ -356,6 +359,7 @@
 				9C565E35216B43DA00A16B22 /* en.lproj in Resources */,
 				9C565E32216B43DA00A16B22 /* Base.lproj in Resources */,
 				9C565E34216B43DA00A16B22 /* zh-Hans.lproj in Resources */,
+				F88CF3E72897DF5000910E28 /* ru.lproj in Resources */,
 				9C565E33216B43DA00A16B22 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

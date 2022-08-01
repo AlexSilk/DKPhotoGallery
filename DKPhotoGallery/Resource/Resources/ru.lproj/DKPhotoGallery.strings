@@ -1,0 +1,32 @@
+//
+//  GitHub
+//  https://github.com/zhangao0086/DKPhotoGallery
+//
+//
+//  License
+//  Copyright (c) 2014 ZhangAo
+//  Released under an MIT license: http://opensource.org/licenses/MIT
+//
+
+"preview.3DTouch.saveImage.title" = "Сохранить изображение";
+
+"preview.image.extractQRCode.title" = " Извлечь QR код";
+
+"preview.image.extractQRCode.result.text.title" = "Информация о QR";
+
+"preview.image.longPress.cancel" = "Отмена";
+
+"preview.image.longPress.saveImage.title" = "Сохранить изображение";
+
+"preview.image.saveImage.result.success" = "Сохранено в галлерее";
+
+"preview.image.saveImage.permission.error" = "Отказано в доступе";
+
+"preview.image.fetch.error" = "Изображение не загружено";
+
+"preview.image.download.original.title" = "Загрузить полное изображение";
+
+"preview.player.fetch.error" = "Видео не загружено";
+
+"preview.player.error.unknown" = "Неизвестная ошибка";
+

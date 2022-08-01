@@ -22,6 +22,9 @@ class DKPhotoGalleryScrollView: UIScrollView {
         self.alwaysBounceHorizontal = true
         self.alwaysBounceVertical = false
         self.delaysContentTouches = false
+        if #available(iOS 11.0, *) {
+            self.contentInsetAdjustmentBehavior = .never
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

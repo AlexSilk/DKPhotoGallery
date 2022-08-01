@@ -11,6 +11,7 @@ import Photos
 
 public let DKPhotoGalleryItemExtraInfoKeyRemoteImageOriginalURL: String = "DKPhotoGalleryItemExtraInfoKeyRemoteImageOriginalURL"    // URL.
 public let DKPhotoGalleryItemExtraInfoKeyRemoteImageOriginalSize: String = "DKPhotoGalleryItemExtraInfoKeyRemoteImageOriginalSize"  // (Optional)UInt. The number of bytes of the image.
+public let DKPhotoGalleryItemExtraInfoKeyComment: String = "DKPhotoGalleryItemExtraInfoKeyComment"
 
 @objc
 public class DKPhotoGalleryItemConstant: NSObject {
@@ -21,6 +22,10 @@ public class DKPhotoGalleryItemConstant: NSObject {
     
     @objc public class func extraInfoKeyRemoteImageOriginalSize() -> String {
         return DKPhotoGalleryItemExtraInfoKeyRemoteImageOriginalSize
+    }
+    
+    @objc public class func extraInfoKeyRemoteImageComment() -> String {
+        return DKPhotoGalleryItemExtraInfoKeyComment
     }
     
 }

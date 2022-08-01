@@ -36,7 +36,7 @@ fileprivate class DKPhotoGalleryContentFooterViewContainer : UIView {
 
 ////////////////////////////////////////////////////////////
 
-internal protocol DKPhotoGalleryContentDataSource: class {
+internal protocol DKPhotoGalleryContentDataSource: AnyObject {
     
     func item(for index: Int) -> DKPhotoGalleryItem
         
@@ -52,7 +52,7 @@ internal protocol DKPhotoGalleryContentDataSource: class {
 
 }
 
-internal protocol DKPhotoGalleryContentDelegate: class {
+internal protocol DKPhotoGalleryContentDelegate: AnyObject {
     
     func contentVCCanScrollToPreviousOrNext(_ contentVC: DKPhotoGalleryContentVC) -> Bool
     
@@ -104,7 +104,13 @@ open class DKPhotoGalleryContentVC: UIViewController, UIScrollViewDelegate {
     open override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.automaticallyAdjustsScrollViewInsets = false
+        
+        if #available(iOS 11.0, *) {
+            
+        } else {
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
+        
         self.view.backgroundColor = UIColor.clear
         
         self.mainView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
